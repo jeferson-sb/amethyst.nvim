@@ -4,6 +4,9 @@ local hl = require('highlight')
 
 function M.setup()
   vim.cmd("hi clear")
+  if vim.fn.exists('syntax_on') then
+    vim.cmd('syntax reset')
+  end
   vim.g.colors_name = "amethyst"
   vim.o.termguicolors = true
   vim.o.background = "dark"
