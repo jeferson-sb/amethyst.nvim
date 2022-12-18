@@ -14,10 +14,26 @@ local colors = {
   purple = {
     "#9F7AEA", "#805AD5", "#6B46C1"
   },
+  mauve = "#ac85e0",
   pink = { "#D53F8C" },
-  white = { "#F4F4F4" },
-  blue_gray = { "#565f89" },
-  cyan = { "#0BC5EA", "#00B5D8", "#00A3C4" }
+  white = { "#F3EEFC" },
+  blue_gray = { "#565f89", "#292e42" },
+  cyan = { "#0BC5EA", "#00B5D8", "#00A3C4" },
 }
+
+colors.ctx = {
+  error = colors.red[1],
+  warning = colors.yellow[1],
+  info = colors.cyan[2],
+  hint = colors.cyan[3]
+}
+
+colors.git = {
+  add = colors.green[1],
+  change = colors.blue_gray[1],
+  delete = colors.red[1]
+}
+
+colors.statusline = colors.indigo[1]
 
 return colors
