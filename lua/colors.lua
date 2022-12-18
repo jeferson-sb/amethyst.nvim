@@ -1,5 +1,11 @@
+-- pallete
+
 local colors = {
-  bg = "#1E1E1E",
+  bg = "#1A1B26",
+  fg = "#d4d4d4",
+  fg_plum = "#a9b1d6",
+  black = "#161824",
+  none = "NONE",
   indigo = { "#1a1b26", "#16161e" },
   red = { "#E53E3E" },
   orange = { "#DD6B20" },
