@@ -3,58 +3,63 @@ C = require('colors')
 
 theme.highlights = {
   -- code syntax
-  ErrorMsg = { fg = C.red[1], bg = C.bg, bold = true },
+  ErrorMsg = { fg = C.ctx.error, bg = C.bg, bold = true },
   Constant = { fg = C.orange[1] },
-  String = { fg = C.yellow[1] },
+  String = { fg = C.green[1] },
   Character = { fg = C.green[1] },
   Variable = { fg = C.white[1] },
-  Number = { fg = C.orange[1] },
-  Float = { fg = C.orange[1] },
-  Boolean = { fg = C.orange[1] },
+  Number = { fg = C.pink[1] },
+  Float = { fg = C.pink[1] },
+  Boolean = { fg = C.pink[1] },
   Function = { fg = C.mauve },
   Keyword = { fg = C.purple[2], italic = true },
   Conditional = { fg = C.purple[2] },
   Repeat = { fg = C.purple[2] },
-  Operator = { fg = C.purple[1] },
+  Operator = { fg = C.purple[2] },
   Comment = { fg = C.blue_gray[1], italic = true },
   Type = { fg = C.mauve },
   StorageClass = { fg = C.mauve },
   PreProc = { fg = C.purple[2] },
   PreCondit = { fg = C.purple[2] },
   Include = { fg = C.purple[3] },
-  Special = { fg = C.yellow[1] },
+  Special = { fg = C.mauve },
   Exception = { fg = C.purple[2] },
   Structure = { fg = C.mauve },
   Typedef = { fg = C.purple[2] },
   Define = { fg = C.purple[2] },
   Macro = { fg = C.purple[2] },
   Statement = { fg = C.purple[2] },
-  Identifier = { fg = C.cyan[2] },
+  Identifier = { fg = C.fg_plum },
   Underlined = { underline = true },
   Bold = { bold = true },
   Italic = { italic = true },
+  Error = { fg = C.ctx.error },
   Title = { fg = C.cyan[3], bold = true },
   Ignore = { fg = C.purple[3], bg = C.none, bold = true },
   Delimiter = { fg = C.fg, bg = C.none },
+  Debug = { fg = C.orange[1] },
+  Todo = { bg = C.green[1], fg = C.bg },
 
   -- editor
   Normal = { fg = C.fg, bg = C.bg },
   NormalNC = { fg = C.fg, bg = C.bg },
-  Visual = { bg = C.cyan[2] },
-  VisualNOS = { bg = C.cyan[2] },
+  Visual = { bg = C.blue_gray[2] },
+  VisualNOS = { bg = C.blue_gray[2] },
   SignColumn = { fg = C.none, bg = C.bg },
   ColorColumn = { bg = C.black },
   MsgArea = { fg = C.indigo[1] },
-  ModeMsg = { fg = C.black, bold = true },
+  MoreMsg = { fg = C.indigo[2] },
+  ModeMsg = { fg = C.fg_plum, bold = true },
+  NonText = { fg = C.blue_gray[1] },
   Directory = { fg = C.mauve },
-  DiffAdd = { bg = C.green[1] },
-  DiffChange = { bg = C.cyan[1] },
-  DiffDelete = { bg = C.red[1] },
-  DiffText = { bg = C.cyan[2] },
+  DiffAdd = { bg = C.git.add },
+  DiffChange = { bg = C.git.change },
+  DiffDelete = { bg = C.git.delete },
+  DiffText = { bg = C.blue_gray[1] },
   EndOfBuffer = { fg = C.bg },
-  VertSplit = { fg = C.blue_gray[1] },
-  WinSeparator = { fg = C.blue_gray[1], bold = true },
-  Substitute = { bg = C.red[1], fg = C.black },
+  VertSplit = { fg = C.divider },
+  WinSeparator = { fg = C.divider, bold = true },
+  Substitute = { bg = C.orange[1], fg = C.black },
   SpellBad = { sp = C.red[1], undercurl = true },
   SpellCap = { sp = C.yellow[1], undercurl = true },
   SpellLocal = { sp = C.cyan[1], undercurl = true },
@@ -64,8 +69,9 @@ theme.highlights = {
   PmenuSbar = { bg = C.bg },
   PmenuThumb = { bg = C.indigo[1] },
   WildMenu = { bg = C.cyan[2] },
-  LineNr = { fg = "#3b4261" },
+  LineNr = { fg = C.blue_gray[1] },
   Whitespace = { fg = C.bg },
+  Cursor = { fg = C.fg, bg = C.fg },
   CursorIM = { fg = C.bg, bg = C.fg },
   CursorColumn = { bg = "#292e42" },
   CursorLine = { bg = "#292e42" },
@@ -124,6 +130,10 @@ theme.highlights = {
   DiagnosticVirtualTextWarn = { bg = C.darken(C.ctx.warning, 0.1), fg = C.ctx.warning },
   DiagnosticVirtualTextInfo = { bg = C.darken(C.ctx.info, 0.1), fg = C.ctx.info },
   DiagnosticVirtualTextHint = { bg = C.darken(C.ctx.hint, 0.1), fg = C.ctx.hint },
+
+  TroubleText = { fg = C.fg_plum },
+  TroubleCount = { fg = C.purple[1], bg = C.blue_gray[1] },
+  TroubleNormal = { fg = C.fg, bg = C.black },
 
   -- illuminate
   IlluminatedWordText = { link = 'LspReferenceText' },
@@ -219,6 +229,10 @@ theme.highlights = {
     default = true,
     link = "Keyword",
   },
+  ["@keyword.coroutine"] = {
+    default = true,
+    link = "@keyword",
+  },
   ["@keyword.function"] = {
     default = true,
     link = "Keyword",
@@ -262,10 +276,6 @@ theme.highlights = {
     default = true,
     link = "Identifier",
   },
-  ["@parameter.reference"] = {
-    default = true,
-    link = "@parameter",
-  },
   ["@preproc"] = {
     default = true,
     link = "PreProc",
@@ -276,7 +286,7 @@ theme.highlights = {
   },
   ["@punctuation.bracket"] = {
     default = true,
-    link = "Delimiter",
+    link = "Special",
   },
   ["@punctuation.delimiter"] = {
     default = true,
@@ -284,7 +294,7 @@ theme.highlights = {
   },
   ["@punctuation.special"] = {
     default = true,
-    link = "Delimiter",
+    link = "Special",
   },
   ["@repeat"] = {
     default = true,
@@ -384,7 +394,7 @@ theme.highlights = {
     default = true,
     link = "Todo",
   },
-  ["@todo"] = {
+  ["@text.todo"] = {
     default = true,
     link = "Todo",
   },
@@ -402,7 +412,7 @@ theme.highlights = {
   },
   ["@type.qualifier"] = {
     default = true,
-    link = "Type",
+    link = "@keyword",
   },
   ["@variable.builtin"] = {
     default = true,
@@ -425,7 +435,7 @@ theme.highlights = {
 
   -- whichkey
   WhichKey = { fg = C.cyan[1] },
-  WhichKeyGroup = { fg = C.cyan[3] },
+  WhichKeyGroup = { fg = C.pink[1] },
   WhichKeyDesc = { fg = C.pink[1] },
   WhichKeySeperator = { fg = C.blue_gray[1] },
   WhichKeyFloat = { bg = C.black },
@@ -435,6 +445,14 @@ theme.highlights = {
   GitSignsAdd = { fg = C.git.add },
   GitSignsChange = { fg = C.git.change },
   GitSignsDelete = { fg = C.git.delete },
+
+  -- GitGutter
+    GitGutterAdd = { fg = C.git.add }, 
+    GitGutterChange = { fg = C.git.change }, 
+    GitGutterDelete = { fg = C.git.delete },
+    GitGutterAddLineNr = { fg = C.git.add },
+    GitGutterChangeLineNr = { fg = C.git.change },
+    GitGutterDeleteLineNr = { fg = C.git.delete },
 
   -- NvimTree
   NvimTreeNormal = { fg = C.fg_sidebar, bg = C.bg },
@@ -462,6 +480,10 @@ theme.highlights = {
   DashboardHeader = { fg = C.purple[1] },
   DashboardCenter = { fg = C.red[1] },
   DashboardFooter = { fg = C.yellow[1], italic = true },
+
+  -- Telescope
+  TelescopeBorder = { fg = C.divider, bg = C.bg },
+  TelescopeNormal = { fg = C.fg, bg = C.bg },
 
   -- CMP
   CmpDocumentation = { fg = C.fg, bg = C.bg },

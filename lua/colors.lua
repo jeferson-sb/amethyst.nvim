@@ -16,7 +16,7 @@ local colors = {
   },
   mauve = "#ac85e0",
   pink = { "#D53F8C" },
-  white = { "#F3EEFC" },
+  white = { "#D3D3D3" },
   blue_gray = { "#565f89", "#292e42" },
   cyan = { "#0BC5EA", "#00B5D8", "#00A3C4" },
 }
@@ -35,6 +35,7 @@ colors.git = {
 }
 
 colors.statusline = colors.indigo[1]
+colors.divider = colors.purple[3]
 
 -- color functions
 local function hexToRgb(c)
