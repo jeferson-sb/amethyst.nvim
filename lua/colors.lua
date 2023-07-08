@@ -1,7 +1,7 @@
 -- pallete
 
 local colors = {
-  bg = "#1A1B26",
+  bg = "#110F15",
   fg = "#d4d4d4",
   fg_plum = "#a9b1d6",
   black = "#161824",
@@ -14,11 +14,15 @@ local colors = {
   purple = {
     "#9F7AEA", "#805AD5", "#6B46C1"
   },
+  violet = {
+    "#3c3348"
+  },
   mauve = "#ac85e0",
   pink = { "#D53F8C" },
   white = { "#D3D3D3" },
   blue_gray = { "#565f89", "#292e42" },
   cyan = { "#0BC5EA", "#00B5D8", "#00A3C4" },
+  metal = { "#25202D" }
 }
 
 colors.ctx = {
@@ -34,7 +38,7 @@ colors.git = {
   delete = colors.red[1]
 }
 
-colors.statusline = colors.indigo[1]
+colors.statusline = colors.purple[3]
 colors.divider = colors.purple[3]
 
 -- color functions
