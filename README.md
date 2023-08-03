@@ -8,6 +8,7 @@ Stunning purplish colorscheme for neovim/lunarvim!
 ---
 
 ![alt vim](.github/demo-1.png)
+![image](https://github.com/jeferson-sb/amethyst/assets/30840709/0e4a6539-c15a-4557-b4bd-5fe210ca8dc1)
 
 ### Color palette
 
