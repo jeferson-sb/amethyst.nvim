@@ -29,7 +29,7 @@ Supports:
 Using [Packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use "jeferson-sb/amethyst"
+use "jeferson-sb/amethyst.nvim"
 
 ```
 
@@ -37,6 +37,6 @@ or
 
 ```lua
 return {
- "jeferson-sb/amethyst"
+ "jeferson-sb/amethyst.nvim"
 }
 ```
