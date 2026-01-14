@@ -1,6 +1,6 @@
 local M = {}
-local theme = require('theme')
-local hl = require('highlight')
+local theme = require('amethyst.theme')
+local hl = require('amethyst.highlight')
 
 function M.setup()
   vim.cmd("hi clear")

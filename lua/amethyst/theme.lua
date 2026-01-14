@@ -1,5 +1,5 @@
 local theme = {}
-C = require('colors')
+C = require('amethyst.colors')
 
 theme.highlights = {
   -- code syntax
@@ -15,17 +15,17 @@ theme.highlights = {
   Keyword = { fg = C.purple[2], italic = true },
   Conditional = { fg = C.purple[2] },
   Repeat = { fg = C.purple[2] },
-  Label = {fg = C.purple[2] },
+  Label = { fg = C.purple[2] },
   Operator = { fg = C.purple[2] },
   Comment = { fg = C.violet[1], italic = true },
-  SpecialComment = {fg = C.violet[1] },
+  SpecialComment = { fg = C.violet[1] },
   Type = { fg = C.mauve },
   StorageClass = { fg = C.mauve },
   PreProc = { fg = C.purple[2] },
   PreCondit = { fg = C.purple[2] },
   Include = { fg = C.purple[3] },
   Special = { fg = C.mauve },
-  SpecialChar = {fg = C.mauve },
+  SpecialChar = { fg = C.mauve },
   Exception = { fg = C.purple[2] },
   Structure = { fg = C.mauve },
   Typedef = { fg = C.purple[2] },
@@ -484,8 +484,8 @@ theme.highlights = {
   GitSignsDelete = { fg = C.git.delete },
 
   -- GitGutter
-  GitGutterAdd = { fg = C.git.add }, 
-  GitGutterChange = { fg = C.git.change }, 
+  GitGutterAdd = { fg = C.git.add },
+  GitGutterChange = { fg = C.git.change },
   GitGutterDelete = { fg = C.git.delete },
   GitGutterAddLineNr = { fg = C.git.add },
   GitGutterChangeLineNr = { fg = C.git.change },
