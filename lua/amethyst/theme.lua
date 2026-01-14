@@ -64,7 +64,7 @@ theme.highlights = {
   DiffText = { bg = C.blue_gray[1] },
   EndOfBuffer = { fg = C.bg },
   VertSplit = { fg = C.divider },
-  WinSeparator = { fg = C.divider, bold = true },
+  WinSeparator = { fg = C.blue_gray[2] },
   Substitute = { bg = C.orange[1], fg = C.black },
   SpellBad = { sp = C.red[1], undercurl = true },
   SpellCap = { sp = C.yellow[1], undercurl = true },
@@ -83,7 +83,7 @@ theme.highlights = {
   CursorLine = { bg = C.metal[1] },
   CursorLineNr = { fg = C.fg_plum },
   QuickFixLine = { bg = C.cyan[2], bold = true },
-  FloatBorder = { bg = C.blue_gray[1] },
+  -- FloatBorder = { bg = C.blue_gray[1] },
   NormalFloat = { fg = C.fg, bg = C.bg },
   WarningMsg = { fg = C.ctx.warning },
   MatchParen = { fg = C.orange[1], bold = true },
@@ -492,10 +492,10 @@ theme.highlights = {
   GitGutterDeleteLineNr = { fg = C.git.delete },
 
   -- NvimTree
-  NvimTreeNormal = { fg = C.fg_sidebar, bg = C.bg },
+  NvimTreeNormal = { fg = C.fg_sidebar, bg = C.none },
   NvimTreeWinSeparator = {
     fg = C.blue_gray[2],
-    bg = C.bg,
+    bg = C.none,
   },
   NvimTreeNormalNC = { fg = C.fg_plum, bg = C.bg },
   NvimTreeRootFolder = { fg = C.blue, bold = true },
@@ -519,7 +519,7 @@ theme.highlights = {
   DashboardFooter = { fg = C.yellow[1], italic = true },
 
   -- Telescope
-  TelescopeBorder = { fg = C.divider, bg = C.bg },
+  TelescopeBorder = { fg = C.blue_gray[2], bg = C.bg },
   TelescopeNormal = { fg = C.fg, bg = C.bg },
 
   -- CMP
