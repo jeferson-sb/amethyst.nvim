@@ -484,12 +484,12 @@ theme.highlights = {
   GitSignsDelete = { fg = C.git.delete },
 
   -- GitGutter
-    GitGutterAdd = { fg = C.git.add }, 
-    GitGutterChange = { fg = C.git.change }, 
-    GitGutterDelete = { fg = C.git.delete },
-    GitGutterAddLineNr = { fg = C.git.add },
-    GitGutterChangeLineNr = { fg = C.git.change },
-    GitGutterDeleteLineNr = { fg = C.git.delete },
+  GitGutterAdd = { fg = C.git.add }, 
+  GitGutterChange = { fg = C.git.change }, 
+  GitGutterDelete = { fg = C.git.delete },
+  GitGutterAddLineNr = { fg = C.git.add },
+  GitGutterChangeLineNr = { fg = C.git.change },
+  GitGutterDeleteLineNr = { fg = C.git.delete },
 
   -- NvimTree
   NvimTreeNormal = { fg = C.fg_sidebar, bg = C.bg },
