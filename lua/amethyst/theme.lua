@@ -58,10 +58,10 @@ theme.highlights = {
   MsgSeparator = { fg = C.fg, bg = C.bg, },
   NonText = { fg = C.blue_gray[1] },
   Directory = { fg = C.mauve },
-  DiffAdd = { bg = C.git.add },
-  DiffChange = { bg = C.git.change },
-  DiffDelete = { bg = C.git.delete },
-  DiffText = { bg = C.blue_gray[1] },
+  DiffAdd = { bg = C.darken(C.git.add, 0.1) },
+  DiffChange = { bg = C.bg },
+  DiffDelete = { bg = C.darken(C.git.delete, 0.1) },
+  DiffText = { bg = C.bg },
   EndOfBuffer = { fg = C.bg },
   VertSplit = { fg = C.divider },
   WinSeparator = { fg = C.blue_gray[2] },
@@ -470,6 +470,8 @@ theme.highlights = {
   markdownListMarker = { fg = C.orange[1], bg = 'NONE' },
   markdownOrderedListMarker = { fg = C.purple[1], bg = 'NONE' },
 
+  RenderMarkdownCode = { bg = C.bg },
+
   -- whichkey
   WhichKey = { fg = C.cyan[1] },
   WhichKeyGroup = { fg = C.pink[1] },
@@ -479,17 +481,31 @@ theme.highlights = {
   WhichKeyValue = { fg = C.black },
 
   -- GitSigns
-  GitSignsAdd = { fg = C.git.add },
+  GitSignsAdd = { fg = C.darken(C.git.add, 0.1) },
   GitSignsChange = { fg = C.git.change },
-  GitSignsDelete = { fg = C.git.delete },
+  GitSignsDelete = { fg = C.darken(C.git.delete, 0.1) },
+  GitSignsCurrentLineBlame = { fg = C.blue_gray[1] },
+  GitSignsAddPreview = { fg = C.darken(C.git.add, 0.1), bg = C.none },
+  GitSignsDeletePreview = { fg = C.darken(C.git.delete, 0.1), bg = C.none },
+  GitSignsAddInline = { fg = C.bg, bg = C.darken(C.git.add, 0.1) },
+  GitSignsDeleteInline = { fg = C.bg, bg = C.darken(C.git.delete, 0.1) },
+  GitSignsChangeInline = { fg = C.bg, bg = C.git.change },
+  GitSignsDeleteVirtLn = { bg = C.bg, fg = C.darken(C.git.delete, 0.1) },
 
   -- GitGutter
-  GitGutterAdd = { fg = C.git.add },
+  GitGutterAdd = { fg = C.darken(C.git.add, 0.1) },
   GitGutterChange = { fg = C.git.change },
-  GitGutterDelete = { fg = C.git.delete },
-  GitGutterAddLineNr = { fg = C.git.add },
+  GitGutterDelete = { fg = C.darken(C.git.delete, 0.1) },
+  GitGutterAddLineNr = { fg = C.darken(C.git.add, 0.1) },
   GitGutterChangeLineNr = { fg = C.git.change },
-  GitGutterDeleteLineNr = { fg = C.git.delete },
+  GitGutterDeleteLineNr = { fg = C.darken(C.git.delete, 0.1) },
+
+  -- GitGraph
+  GitGraphBranch1 = { fg = C.pink[1] },
+  GitGraphBranch2 = { fg = C.cyan[1] },
+  GitGraphBranch3 = { fg = C.purple[1] },
+  GitGraphBranch4 = { fg = C.mauve[1] },
+  GitGraphBranch5 = { fg = C.orange[1] },
 
   -- NvimTree
   NvimTreeNormal = { fg = C.fg_sidebar, bg = C.none },
@@ -499,9 +515,9 @@ theme.highlights = {
   },
   NvimTreeNormalNC = { fg = C.fg_plum, bg = C.bg },
   NvimTreeRootFolder = { fg = C.blue, bold = true },
-  NvimTreeGitDirty = { fg = C.git.change },
-  NvimTreeGitNew = { fg = C.git.add },
-  NvimTreeGitDeleted = { fg = C.git.delete },
+  NvimTreeGitDirty = { fg = C.yellow[1] },
+  NvimTreeGitNew = { fg = C.cyan[1] },
+  NvimTreeGitDeleted = { fg = C.red[1] },
   NvimTreeOpenedFile = { bg = C.blue_gray[2] },
   NvimTreeSpecialFile = { fg = C.purple[1], underline = true },
   NvimTreeIndentMarker = { fg = C.blue_gray[1] },
